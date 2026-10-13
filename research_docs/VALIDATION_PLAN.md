@@ -4,7 +4,7 @@ This checklist is designed for the eventual paper and for reviewers assessing re
 
 | Activity | Action | Acceptance criteria / outputs | Current status |
 |---|---|---|---|
-| Boundary provenance | Establish official source, date, scale, intended administrative/hydrologic meaning | documented provider and geometry metadata | Unverified source |
+| Study area documentation | Record boundary file source, date, spatial resolution and extent | transparent GIS boundary metadata | Geometry prepared; metadata to be documented |
 | SAR water classification | Stratified independent water/non-water reference labels across dry and monsoon conditions | confusion matrices, producer/user accuracy, area-adjusted CI, sensitivity across thresholds | Not done |
 | Flooded vegetation | Compare optical, C-band SAR, and any ESA P-band scenes in vegetated classes | habitat-specific errors and omission analysis | Planned |
 | Temporal representativeness | Record exact acquisition dates, valid observation counts and temporal interpolation assumptions | event uncertainty, acquisition time plots | Sparse 1–3 SAR scenes/month |
