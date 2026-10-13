@@ -10,7 +10,7 @@ June 2022 nominal low-VV area was 162.775 km²; the median June area in the othe
 
 Local Notebook 10 used CHIRPS/ERA5-Land climate covariates to examine seasonal and antecedent rainfall association, and compared Ridge models with simpler seasonal baselines under leave-one-year-out splits. Its predictor preprocessing was fitted only within training years. Correlation, cross-validated error and residuals are **not causal evidence**. Local Notebook 11 audited TROPOMI Level-3-derived XCH4 missingness (69/84 ROI months), conditional low-VV availability and coverage-sensitive associations, but **did not** audit native Level-2 retrieval footprints or fit an atmospheric inversion.
 
-**Public availability:** Notebook source code 09–11 is published. Their local execution results (new figures, selected CSVs, manifests and reports) are not yet in the current GitHub repository checkout. The previous notebooks/figures remain useful as earlier exploratory products; they should be clearly distinguished from the new local methods. See [findings and limitations](FINDINGS_2019_2025_AND_LIMITATIONS.md).
+**Public availability:** Notebook source code 09–11, 14 new figures, 26 result tables/manifests and two scientific reports are now published on GitHub. Independent end-to-end reproduction and scientific validation remain outstanding. The previous notebooks/figures remain useful as earlier exploratory products; they should be clearly distinguished from the new local methods. See [findings and limitations](FINDINGS_2019_2025_AND_LIMITATIONS.md).
 
 ## Design and geographic scope
 
