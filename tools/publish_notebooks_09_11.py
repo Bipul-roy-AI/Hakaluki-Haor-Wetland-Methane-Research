@@ -167,6 +167,18 @@ def prepare_readme(repo: Path, images: list[str], notebooks: list[str], tables: 
             "**Those notebooks, their final CSVs and their newest figures have not yet been committed to this GitHub repository** as of 14 October 2026.",
             "**Notebooks 09–11, selected CSVs and figures are now published below.** The code and results remain exploratory and have not undergone independent validation.")
         revised = revised.replace("**not yet committed to this GitHub repository**", "**published below**")
+        revised = revised.replace(
+            "**Notebooks 09–11 are now publicly committed; their executed CSVs, reports and newest figures remain on the local analysis computer until the publication sync runs.**",
+            "**Notebooks 09–11 and selected executed figures, CSVs and reports are now published on GitHub.**")
+        revised = revised.replace(
+            "Public `notebooks/` now includes **00–11**; executed Notebooks 09–11 result figures, CSVs and reports remain pending upload.",
+            "Public `notebooks/` includes **00–11**; selected executed results are published below.")
+        revised = revised.replace(
+            "The executed result files are not yet present on GitHub.",
+            "Selected executed result files are published below; independent validation remains outstanding.")
+        revised = revised.replace(
+            "**Executed figures generated locally and awaiting Git upload:**",
+            "**Figures from the executed Notebook 09–11 workflows:**")
         revised = revised.replace("Current public processing notebooks are **00–08** in `notebooks/`; the updated 09–11 notebooks are **local-only** pending upload.",
                                   "Current public processing notebooks include **09–11** in `notebooks/` alongside earlier analyses.")
         revised = revised.replace("**Those notebooks, their final CSVs and their newest figures have not yet been committed to this GitHub repository** as of 14 October 2026.",
@@ -282,6 +294,18 @@ def main() -> int:
         after = after.replace(
             "**Completed locally but not yet committed to Git:**",
             "**Completed and published (selected notebooks and derived outputs):**")
+        after = after.replace(
+            "**The notebook source code is now committed; new local figures, derived tables and reports still require upload.**",
+            "**Notebooks 09–11 and selected figures, tables and reports are published. They remain exploratory and have not been independently validated.**")
+        after = after.replace(
+            "The locally generated figures, derived tables and reports are still pending upload; public code availability alone does not independently reproduce the reported numerical outputs.",
+            "Selected locally executed figures, tables and reports are now published; public code and results still require independent reproduction and validation.")
+        after = after.replace(
+            "**Completed locally; notebook source now on GitHub, but final executed outputs remain pending Git upload:**",
+            "**Completed; notebook source and selected executed artifacts now on GitHub:**")
+        after = after.replace(
+            "**Public availability:** Notebook source code 09–11 is published. Their local execution results (new figures, selected CSVs, manifests and reports) are not yet in the current GitHub repository checkout.",
+            "**Public availability:** Notebook source code 09–11 and selected executed figures, CSVs, manifests and reports are now published on GitHub.")
         after = after.replace(
             "**Public availability as of 14 October 2026:** Notebooks 09–11 and the new derived figures/tables are still local and are not part of the current GitHub repository checkout.",
             "**Public availability:** Notebooks 09–11 and selected figures/tables are now published in the repository; independent scientific validation remains outstanding.")
