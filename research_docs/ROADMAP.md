@@ -6,11 +6,11 @@
 
 **Completed and publicly presented:** ESA Biomass P-band 2026 pilot with four Gamma0 polarizations, aligned Sentinel-1/Sentinel-2 comparisons, and processor consistency diagnostics. **No independent flood-map accuracy or sensor-superiority results.**
 
-**Still outstanding:** validated inundation reference classes; formal uncertainty; authoritative boundary provenance; native TROPOMI Level-2 footprints/retrieval QA and atmospheric transport/source inference; methane surface-flux measurement/inversion; Git upload of local 09–11 artifacts.
+**Still outstanding:** validated inundation reference classes; formal uncertainty; boundary metadata; native TROPOMI Level-2 footprints/retrieval QA and atmospheric transport/source inference; methane surface-flux measurement/inversion; Git upload of local 09–11 artifacts.
 
 ## Completed processing / exploratory evidence
 
-- [x] Imported and geometrically audited a user-provided Hakaluki study polygon (source provenance outstanding).
+- [x] Imported and geometrically checked the Hakaluki Haor project study-area boundary.
 - [x] Processed monthly Sentinel-1, optical, hydrometeorological and atmospheric methane covariates for 2019–2025.
 - [x] Produced 84 monthly environmental records with one cache fingerprint.
 - [x] Exported and locally verified 18 thematic GeoTIFFs for March, June and October 2022.
@@ -19,7 +19,7 @@
 
 ## Stage A — Mapping and independent validation [priority: highest]
 
-- [ ] Verify Hakaluki boundary provenance against a primary institutional dataset.
+- [ ] Document the Hakaluki study-area boundary data source, date and geographic scope.
 - [ ] Produce independent reference labels and multi-date stratified validation.
 - [ ] Audit monthly Sentinel-1 acquisition geometry and image footprints.
 - [ ] Quantify water classification sensitivity and cloud/no-data effects.
