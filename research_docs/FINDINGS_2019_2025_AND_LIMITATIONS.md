@@ -1,6 +1,6 @@
 # Findings, non-findings and limitations — Hakaluki Haor
 
-**Evidence status:** Independent, exploratory research; updated 14 October 2026. These summaries come from completed *local* Jupyter Notebook 09 (Sentinel-1), 10 (hydroclimate) and 11 (TROPOMI QA) output logs. **As of this update, those notebooks, their new figures, and their generated CSV/report files have not yet been committed to this repository.** The results below should therefore be treated as documented local preliminary outputs, not yet independently reproduced from the repository checkout. Earlier notebooks and published figures may use different water-screening definitions and must not be silently pooled with Notebook 09.
+**Evidence status:** Independent, exploratory research; updated 14 October 2026. These summaries come from completed *local* Jupyter Notebook 09 (Sentinel-1), 10 (hydroclimate) and 11 (TROPOMI QA) output logs. **The notebook source code is now committed; new local figures, derived tables and reports still require upload.** The results below should therefore be treated as documented local preliminary outputs, not yet independently reproduced from the repository checkout. Earlier notebooks and published figures may use different water-screening definitions and must not be silently pooled with Notebook 09.
 
 ## Executive summary
 
@@ -96,10 +96,10 @@ See the Biomass figures and processing notes in the root README.
 3. **Atmospheric/background attribution:** Winds, upwind references or trajectory/transport methods; anthropogenic and regional source confounding; sampling-aware comparisons; do not report flux from XCH4 alone.
 4. **Event-specific hydrology:** Daily/event-scale rainfall and hydrometric levels with actual SAR overpass dates; distinguish flash flood, seasonal expansion and permanent-water dynamics.
 5. **Cross-sensor validation:** Independent reference samples for P- versus C-band, especially flooded vegetation; consistent geometry/radiometry controls and paired acquisition design.
-6. **Public reproducibility:** Commit local notebooks 09–11, their manifests and reports, key derived CSVs, and sanitized figures; verify public links and suppress credentials, tokens and restricted raw data.
+6. **Public reproducibility:** Commit locally executed Notebooks 09–11 manifests and reports, key derived CSVs, and sanitized figures (notebook source code is already public); verify public links and suppress credentials, tokens and restricted raw data.
 
 ## 7. Data status and research integrity
 
-These results were reported from local successful notebook executions, **not independently re-run as part of this GitHub documentation update**. As of 14 October 2026, only notebooks 00–08 were present on the GitHub default branch. The new 09–11 files and figures must be published before readers can exactly reproduce their reported numerical results from this repository.
+These results were reported from local successful notebook executions, **not independently re-run as part of this GitHub documentation update**. Notebook source files 09–11 are now on GitHub. The locally generated figures, derived tables and reports are still pending upload; public code availability alone does not independently reproduce the reported numerical outputs.
 
 No field methane flux observations, methane inversion, independent flood accuracy estimates, or statistically supported causal attribution are claimed. This project is independent and is not an institutional ESA or University of Leeds research collaboration.
