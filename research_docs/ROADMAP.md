@@ -2,11 +2,11 @@
 
 ## October 2026 progress update (local notebooks 09–11)
 
-**Completed locally but not yet committed to Git:** 2019–2025 consistent-orbit Sentinel-1 low-VV monthly screening (84/84 periods), seven observation-normalized annual frequency rasters, June 2022 month-matched and spatial departures, CHIRPS/ERA5-Land rainfall-lag and leave-year-out modelling, and TROPOMI Level-3-derived observation availability/selection analysis. See [findings and limitations](FINDINGS_2019_2025_AND_LIMITATIONS.md).
+**Completed locally; notebook source now on GitHub, but final executed outputs remain pending Git upload:** 2019–2025 consistent-orbit Sentinel-1 low-VV monthly screening (84/84 periods), seven observation-normalized annual frequency rasters, June 2022 month-matched and spatial departures, CHIRPS/ERA5-Land rainfall-lag and leave-year-out modelling, and TROPOMI Level-3-derived observation availability/selection analysis. See [findings and limitations](FINDINGS_2019_2025_AND_LIMITATIONS.md).
 
 **Completed and publicly presented:** ESA Biomass P-band 2026 pilot with four Gamma0 polarizations, aligned Sentinel-1/Sentinel-2 comparisons, and processor consistency diagnostics. **No independent flood-map accuracy or sensor-superiority results.**
 
-**Still outstanding:** validated inundation reference classes; formal uncertainty; boundary metadata; native TROPOMI Level-2 footprints/retrieval QA and atmospheric transport/source inference; methane surface-flux measurement/inversion; Git upload of local 09–11 artifacts.
+**Still outstanding:** validated inundation reference classes; formal uncertainty; boundary metadata; native TROPOMI Level-2 footprints/retrieval QA and atmospheric transport/source inference; methane surface-flux measurement/inversion; Git upload of local 09–11 execution artifacts (notebook source files now published).
 
 ## Completed processing / exploratory evidence
 
@@ -28,8 +28,8 @@
 ## Stage B — Dynamic wetland products
 
 - [ ] Export full-resolution monthly maps or reproducible on-demand mosaics.
-- [x] Compute 2019–2025 **observation-normalized preliminary low-VV screening frequency** (local Notebook 09; unvalidated; public upload pending).
-- [x] Produce descriptive 2022 month-matched and spatial June low-VV departures (local Notebook 09; not flood truth).
+- [x] Compute 2019–2025 **observation-normalized preliminary low-VV screening frequency** (local Notebook 09; unvalidated; notebook source published, outputs pending upload).
+- [x] Produce descriptive 2022 month-matched and spatial June low-VV departures (local Notebook 09; notebook source published, not flood truth).
 - [ ] Determine independently dated flash-flood event windows from gauges, rain and image sequences.
 
 ## Stage C — Novel sensors
