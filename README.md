@@ -1,7 +1,6 @@
-# Hakaluki Haor | Wetland inundation, hydroclimate and atmospheric methane
+# Hakaluki Haor | Wetland Dynamics, Hydroclimate and Atmospheric Methane Observations
 
-**Independent Earth-observation research in northeastern Bangladesh**  
-**Main study:** January 2019–December 2025 | **Separate P-band SAR pilot:** October 2026  
+**Study period:** January 2019–December 2025 | **ESA Biomass P-band observations:** October 2026  
 Sentinel-1 · Sentinel-2 · ESA Biomass P-band · TROPOMI XCH4 · CHIRPS · ERA5-Land · GIS · Google Earth Engine · Python
 
 > **Research status: exploratory; independent scientific validation outstanding.** The radar-derived maps are **low-VV backscatter screening products, not verified flood maps**. TROPOMI measures atmospheric column methane (XCH4, ppb), **not wetland methane emission flux**. No field methane-flux validation, atmospheric inversion, or causal attribution has been completed.
@@ -25,8 +24,6 @@ The most informative outcome is **not a measured methane release**. Rather, we o
 
 **Read the detailed research findings, non-findings and remaining work:** [Findings and limitations, 2019–2025](research_docs/FINDINGS_2019_2025_AND_LIMITATIONS.md).
 
-**Public-reproducibility status:** The precise results above were reported from completed **local** Jupyter Notebook 09–11 runs. **Notebooks 09–11, 14 figures, 26 tables/manifests and two scientific reports are now published on GitHub.** Published older 2022 visualizations may use a different screening method; they should not be assumed equivalent to the fixed −17 dB 2019–2025 series. Local execution logs are not a substitute for independent validation.
-
 ## What is important scientifically
 
 ### June 2022: unusual radar screening extent, not a validated flood boundary
@@ -47,9 +44,9 @@ Available-month, calendar-month-deseasonalized Spearman correlations were near z
 
 **We cannot conclude that inundation did or did not alter wetland methane emissions.** XCH4 is an atmospheric column concentration influenced by transport and regional sources, and native Level-2 footprint/retrieval QA checks remain outstanding.
 
-## Visual results already published on GitHub
+## Study Area and Earth Observation Results
 
-The following figures are from the **earlier exploratory workflow**, and may use different screening definitions from Notebook 09. The 14 **newer Notebook 09–11 figures** are embedded in the [updated results gallery](#updated-20192025-results-published-source-files).
+The maps and plots below introduce the Hakaluki Haor study area and summarize the initial Earth observation analyses. Updated 2019–2025 results and ESA Biomass observations follow in the sections below.
 
 ### Hakaluki Haor study area
 
@@ -73,10 +70,6 @@ The following figures are from the **earlier exploratory workflow**, and may use
 
 ![Exploratory relationships from an earlier workflow](docs/assets/figures/04_exploratory_correlations.png)
 
-**Newly published figures, embedded in the results gallery below:** `inundation09_annual_lowvv_frequency_2019_2025.png`, `inundation09_june2022_spatial_lowvv_departure.png`, `hydro10_2022_radar_rainfall_departures.png`, `hydro10_deseasonalized_lag_associations.png`, `methane11_observation_selection_bias.png`, `methane11_coverage_sensitive_scatter.png`.
-
-The [publishing helper](tools/publish_notebooks_09_11.py) was used to commit these figures; it can synchronize future regenerated outputs.
-
 ## What we cannot claim yet
 
 | Critical gap | Work needed |
@@ -99,32 +92,8 @@ The [publishing helper](tools/publish_notebooks_09_11.py) was used to commit the
 
 **Source and method navigation:** [Full findings](research_docs/FINDINGS_2019_2025_AND_LIMITATIONS.md) · [Methods and limitations](research_docs/METHODS_AND_LIMITATIONS.md) · [Validation plan](research_docs/VALIDATION_PLAN.md) · [Development roadmap](research_docs/ROADMAP.md) · [Data provenance](research_docs/DATA_DICTIONARY_AND_PROVENANCE.md).
 
-## Notebook 09–11 reproducible source code
-
-- [09 — Consistent-orbit 2019–2025 low-VV screening](notebooks/09_inundation_dynamics_2019_2025_QA_v3_export_fixed.ipynb)
-- [10 — Hydroclimatic controls and held-out modelling](notebooks/10_hydroclimatic_controls_2019_2025.ipynb)
-- [11 — TROPOMI atmospheric methane observation QA](notebooks/11_tropomi_methane_qa_2019_2025.ipynb)
-- [Publish locally executed figures, tables and reports](tools/publish_notebooks_09_11.py)
-
-**Notebooks and executed result files are published; independent scientific re-execution and validation remain outstanding.**
-
-## Available data and reproducibility
-
-- [Published 2019–2025 monthly environmental table](docs/data/hakaluki_monthly_2019_2025.csv) — original processing, not a substitute for the later Notebook 09 reanalysis.
-- [Observation completeness table](docs/data/complete_data_quality_2019_2025.csv).
-- [Earlier exploratory lag results](docs/data/monthly_lag_screen.csv) and [year-held-out models](docs/data/exploratory_year_holdout_models.csv); methods may differ from Notebook 10.
-- Public `notebooks/` includes **00–11**; selected outputs are available below and in `docs/assets/` and `research_docs/reports/`. Reusable code is under `src/` and `gee/`.
-- Selected study boundary files, derived figures and Biomass cross-sensor statistical tables are published; some raw scenes, large intermediate rasters and Earth Engine data collections remain outside Git. See [safe publishing guidance](research_docs/GITHUB_PUBLISHING_GUIDE.md).
-
-**Research integrity:** Independent researcher-led project, thematically related to the University of Leeds PhD topic *Magnitude and Controls of Tropical Wetland Methane Emissions Using Novel Satellite Data* (PGR-P-2558), **not** a University of Leeds or ESA collaboration. No official flood map, independently calibrated methane flux, or causal attribution is claimed.
-
----
-
-
 <!-- LOCAL_2019_2025_RESULTS_START -->
-## Updated 2019–2025 results: published source files
-
-These figures and tables come from local Notebooks 09–11 and remain **exploratory observations**, not independent validation of inundation, methane flux, or causation.
+## 2019–2025 Inundation, Hydroclimate and Methane Results
 
 ### Monthly low-VV screening, 2019–2025
 
@@ -252,22 +221,14 @@ These figures and tables come from local Notebooks 09–11 and remain **explorat
 <!-- LOCAL_2019_2025_RESULTS_END -->
 
 <!-- BIOMASS_2026_START -->
-## ESA Biomass P-band SAR — 2026 Research Extension
+## ESA Biomass P-band SAR — 2026 Observations and Cross-Sensor Analysis
 
 **Status:** Preliminary analysis; independent validation ongoing.
 
-This extension investigates whether ESA Biomass P-band SAR can
-provide additional information about the spatial characteristics
-of Hakaluki Haor, particularly open-water and vegetation-related
-radar scattering.
-
-The pilot uses a fully polarimetric Level-1B acquisition from
-**2 October 2026**, compared with Sentinel-1 C-band SAR from
+The analysis uses a fully polarimetric ESA Biomass Level-1B acquisition from
+**2 October 2026**, alongside Sentinel-1 C-band SAR from
 **30 September 2026** and Sentinel-2 optical observations from
 **7 October 2026**.
-
-This is a supplementary 2026 experiment, separate from the
-principal 2019–2025 time-series analysis.
 
 ### Methods
 
