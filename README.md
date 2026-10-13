@@ -1,99 +1,115 @@
-# Hakaluki Haor | Wetland inundation and atmospheric methane dynamics
+# Hakaluki Haor | Wetland inundation, hydroclimate and atmospheric methane
 
-**Reproducible Earth Observation research in northeastern Bangladesh**  
-Sentinel-1 SAR · Sentinel-2 · Dynamic World · TROPOMI XCH₄ · CHIRPS · ERA5-Land · GIS · Python · Google Earth Engine
+**Independent Earth-observation research in northeastern Bangladesh**  
+**Main study:** January 2019–December 2025 | **Separate P-band SAR pilot:** October 2026  
+Sentinel-1 · Sentinel-2 · ESA Biomass P-band · TROPOMI XCH4 · CHIRPS · ERA5-Land · GIS · Google Earth Engine · Python
 
-> **Research status: exploratory / ongoing.** Flood masks are low-VV screening products, not validated flood maps. TROPOMI measures atmospheric column methane (XCH₄), not wetland surface methane flux. Local field flux calibration and atmospheric inversion have not yet been completed.
+> **Research status: exploratory; independent scientific validation outstanding.** The radar-derived maps are **low-VV backscatter screening products, not verified flood maps**. TROPOMI measures atmospheric column methane (XCH4, ppb), **not wetland methane emission flux**. No field methane-flux validation, atmospheric inversion, or causal attribution has been completed.
 
-## Research at a glance
+## Main findings — and their boundaries
 
-| Indicator | Currently documented |
+The most informative outcome is **not a measured methane release**. Rather, we observed (a) unusually extensive low-VV detections coinciding with exceptional rainfall during June 2022 and (b) **scarce TROPOMI XCH4 observations during months of greatest low-VV screening extent**, making a direct methane response difficult to investigate.
+
+| Research component | What the completed local analysis reports | What it does **not** prove |
+|---|---|---|
+| Radar observation support | **84/84 months** with Sentinel-1 on one ascending track (relative orbit 41), 214 scenes; one single-scene month | Independent accuracy of a water/flood classification |
+| June 2022 low-VV area | **162.78 km²**, versus **120.10 km²** median of the other six Junes (**+42.68 km²**) at nominal −17 dB | Verified flooded-water area |
+| June 2022 spatial low-VV departure | **+42.16 km²** net screening-frequency-equivalent difference from the **mean** historical June map | A second independent flood-area estimate |
+| June 2022 CHIRPS rainfall | **1,041.35 mm**, **+367.17 mm** above other-June median | Causal proof of flood dynamics |
+| Deseasonalized climate link | Preceding-three-month rainfall sum vs. low-VV area: **Spearman rho +0.524**, n = 81 | Hydrological mechanism or causal response lag |
+| Year-held-out prediction | Climate Ridge: **RMSE 17.45 km²** vs. seasonal baseline **19.15**; Ridge **MAE 13.65** vs. baseline **13.26** | Consistent performance improvement across years |
+| TROPOMI methane availability | ROI XCH4 in **69/84 months**; only **3/7 Junes**, **2/7 Julys**, **1/7 Augusts** | Representative year-round atmospheric methane measurements |
+| Conditional observation availability | XCH4 present in **21/21** lowest-low-VV-quartile months; only **8/21** highest-quartile months | Causal link between surface wetness and satellite retrieval failure |
+| Methane association | Available-month deseasonalized rank correlations near **zero** | Evidence that methane emissions are unaffected by inundation |
+| ESA Biomass polarimetry | Four 25 m Gamma0 P-band layers; descriptive comparison with C-band and Sentinel-2 | Superior P-band flood-detection accuracy |
+
+**Read the detailed research findings, non-findings and remaining work:** [Findings and limitations, 2019–2025](research_docs/FINDINGS_2019_2025_AND_LIMITATIONS.md).
+
+**Public-reproducibility status:** The precise results above were reported from completed **local** Jupyter Notebook 09–11 runs. **Those notebooks, their final CSVs and their newest figures have not yet been committed to this GitHub repository** as of 14 October 2026. Published older 2022 visualizations may use a different screening method; they should not be assumed equivalent to the fixed −17 dB 2019–2025 series. Local execution logs are not a substitute for independent validation.
+
+## What is important scientifically
+
+### June 2022: unusual radar screening extent, not a validated flood boundary
+
+In June 2022, the nominal low-VV detection area was **162.775 km²**, about **42.676 km² higher** than the median June total in the six comparison years. The spatial June comparison gave **+42.164 km²** when the binary 2022 indicator was contrasted with the *mean per-pixel frequency* of other Junes. These are **different descriptive statistics**. Neither is independently validated extra inundation. June rainfall was substantially above the other-June median.
+
+A single track with 1–3 scenes per month does not resolve exact flash-flood timing, permanent water versus transient inundation, or flooded vegetation. The VV cutoff is a screening threshold requiring independent calibration.
+
+### Rainfall: a possible antecedent-wetness association, mixed prediction
+
+After calendar-month adjustment, nominal low-VV deviations were descriptively associated with **same-month rainfall (rho +0.232)**, **one-month-lag rainfall (+0.428)** and **preceding-three-month rainfall (+0.524)**. However, a month + rainfall/temperature Ridge model did not consistently beat the simpler month-median baseline in leave-one-year-out validation. The June 2022 out-of-year model left a **+39.26 km² low-VV residual**. Neither correlation nor residual identifies a particular causal driver.
+
+### Atmospheric methane: observation gaps obstruct the key event
+
+TROPOMI-derived ROI XCH4 was available for 69/84 monthly periods, but only 3/7 Junes and 1/7 Augusts. **June 2022 has no valid monthly ROI XCH4 value in our Level-3-derived dataset**. Availability was **100%** for the lowest 21 low-VV months, versus **38.1%** for the highest 21. This is significant **descriptive sampling imbalance**, but seasonal cloud/weather and acquisition/retrieval conditions may confound it.
+
+Available-month, calendar-month-deseasonalized Spearman correlations were near zero across tested support levels: about **−0.052 to −0.013** for ROI XCH4 and **+0.026 to +0.049** for ROI-minus-reference-ring XCH4. The respective complete-case analyses used **62–66 months**, fewer than the 69 with a simple ROI methane value; missing-row exclusions warrant audit.
+
+**We cannot conclude that inundation did or did not alter wetland methane emissions.** XCH4 is an atmospheric column concentration influenced by transport and regional sources, and native Level-2 footprint/retrieval QA checks remain outstanding.
+
+## Visual results already published on GitHub
+
+The following figures **are present in this repository** and render directly on this README. The 2022 water-screen figure comes from earlier exploratory processing, **not necessarily the same algorithm as Notebook 09**.
+
+### Study polygon (researcher supplied; boundary provenance unverified)
+
+![Hakaluki study-area boundary](docs/assets/figures/hakaluki_boundary_audit_map.png)
+
+### Earlier March–June–October 2022 low-backscatter screening maps
+
+![Earlier exploratory SAR screening, March June and October 2022](docs/assets/figures/hakaluki_2022_sar_geographic_comparison.png)
+
+### Monthly Earth-observation series, 2019–2025
+
+![Earlier multi-source monthly series](docs/assets/figures/01_monthly_timeseries.png)
+
+### Data completeness and seasonal patterns
+
+![Observed data completeness](docs/assets/figures/02_data_completeness.png)
+
+![Multi-year exploratory seasonality](docs/assets/figures/03_monthly_seasonality.png)
+
+### Early exploratory covariate associations (not causal)
+
+![Exploratory relationships from an earlier workflow](docs/assets/figures/04_exploratory_correlations.png)
+
+**Newer figures generated locally but not yet uploaded:** `inundation09_annual_lowvv_frequency_2019_2025.png`, `inundation09_june2022_spatial_lowvv_departure.png`, `hydro10_2022_radar_rainfall_departures.png`, `hydro10_deseasonalized_lag_associations.png`, `methane11_observation_selection_bias.png`, `methane11_coverage_sensitive_scatter.png`.
+
+These will be embedded once their files are committed. No broken placeholder image links are used here.
+
+## What we cannot claim yet
+
+| Critical gap | Work needed |
 |---|---|
-| Study period | 2019–2025 |
-| Monthly records | 84 |
-| Local GeoTIFF exports inventoried | 18 (not necessarily committed to Git) |
-| Months with an ROI XCH₄ value | 69 / 84; retrieval-quality screening remains essential |
-| Study-area polygon | User-provided, topologically valid; source accuracy not independently confirmed |
-| Field methane flux observations | Not yet collected |
+| **Validated flood area / flooded vegetation** | Independently interpreted reference imagery or field labels; threshold and orbit sensitivity; confusion matrices and area uncertainty |
+| **Confirmed 2022 flash-flood onset or cause** | Event-scale radar acquisition timing, rain/gauge/water-level evidence, control for seasonal or permanent water |
+| **Local methane emission rates** | Flux measurements or defensible atmospheric inversion; XCH4 alone cannot supply flux |
+| **Reliable methane response to June 2022** | Native TROPOMI Level-2 QA, real retrieval footprints, cloud/aerosol filters, wind and source-transport diagnostics; June 2022 Level-3 ROI value currently missing |
+| **Generalizable climate prediction** | Stronger held-out evaluation, uncertainty and alternative baselines; avoid overfitting seven years of data |
+| **P-band superiority** | Independent water/flooded vegetation labels, noise-floor studies, compatible calibration, temporal/geometry controls |
+| **Entirely public reproduction** | Upload local notebooks 09–11, their sanitized manifests, figures, derived tables, and reports |
 
-## Featured results
+## Research questions and methods
 
-### Study-area boundary (researcher-supplied; provenance pending)
+1. How does radar low-backscatter screening vary from 2019 to 2025, and how accurately can it identify actual open water and flooded vegetation?
+2. How do rainfall timing, antecedent wetness and air temperature relate to the radar time series after accounting for month-of-year seasonality?
+3. How does wet-season methane retrieval missingness affect what can be inferred from satellite XCH4 observations?
+4. Can ESA Biomass P-band polarimetry add independently demonstrated wetland information beyond Sentinel-1 C-band?
+5. What field, transport and inversion evidence is required to estimate methane **emissions**?
 
-![Study-area boundary (researcher-supplied; provenance pending)](docs/assets/figures/hakaluki_boundary_audit_map.png)
+**Source and method navigation:** [Full findings](research_docs/FINDINGS_2019_2025_AND_LIMITATIONS.md) · [Methods and limitations](research_docs/METHODS_AND_LIMITATIONS.md) · [Validation plan](research_docs/VALIDATION_PLAN.md) · [Development roadmap](research_docs/ROADMAP.md) · [Data provenance](research_docs/DATA_DICTIONARY_AND_PROVENANCE.md).
 
-### Seasonal water-screen comparison: March, June and October 2022
+## Available data and reproducibility
 
-![Seasonal water-screen comparison: March, June and October 2022](docs/assets/figures/hakaluki_2022_sar_geographic_comparison.png)
+- [Published 2019–2025 monthly environmental table](docs/data/hakaluki_monthly_2019_2025.csv) — original processing, not a substitute for the later Notebook 09 reanalysis.
+- [Observation completeness table](docs/data/complete_data_quality_2019_2025.csv).
+- [Earlier exploratory lag results](docs/data/monthly_lag_screen.csv) and [year-held-out models](docs/data/exploratory_year_holdout_models.csv); methods may differ from Notebook 10.
+- Existing public `notebooks/` contains **00–08**; local **09–11** are pending Git publication. Reusable code is under `src/` and `gee/`.
+- Selected study boundary files, derived figures and Biomass cross-sensor statistical tables are published; some raw scenes, large intermediate rasters and Earth Engine data collections remain outside Git. See [safe publishing guidance](research_docs/GITHUB_PUBLISHING_GUIDE.md).
 
-### 2019–2025 time series: water screen, hydroclimate and XCH₄
+**Research integrity:** Independent researcher-led project, thematically related to the University of Leeds PhD topic *Magnitude and Controls of Tropical Wetland Methane Emissions Using Novel Satellite Data* (PGR-P-2558), **not** a University of Leeds or ESA collaboration. No official flood map, independently calibrated methane flux, or causal attribution is claimed.
 
-![2019–2025 time series: water screen, hydroclimate and XCH₄](docs/assets/figures/01_monthly_timeseries.png)
-
-### Multi-year descriptive seasonality
-
-![Multi-year descriptive seasonality](docs/assets/figures/03_monthly_seasonality.png)
-
-### Observational completeness and uncertainty
-
-![Observational completeness and uncertainty](docs/assets/figures/02_data_completeness.png)
-
-### Exploratory pairwise relationships (not causal)
-
-![Exploratory pairwise relationships (not causal)](docs/assets/figures/04_exploratory_correlations.png)
-
-## Scientific questions
-
-1. **Inundation mapping:** How do apparent open-water extent and flooded vegetation vary seasonally and during flood disturbances, and how accurate are different sensors?
-2. **Atmospheric methane:** When quality-controlled data exist, are regional XCH₄ anomalies associated with flood extent and hydroclimate after accounting for observation gaps and atmospheric transport?
-3. **Process controls:** How do inundation, temperature and vegetation jointly explain observed variability, and what would be required to infer methane surface flux?
-
-These questions parallel the themes of the University of Leeds PhD advertisement *Magnitude and Controls of Tropical Wetland Methane Emissions Using Novel Satellite Data* (PGR-P-2558). **This project is independent and is not presented as a University of Leeds or ESA collaboration.**
-
-## Available outputs
-
-- [Interactive/static project gallery](docs/index.html)
-- [Data catalogue](docs/data_catalog.csv) and [source/output inventory](docs/source_manifest.csv)
-- [Methods and limitations](research_docs/METHODS_AND_LIMITATIONS.md)
-- [Research questions and PhD alignment](research_docs/PHD_RELEVANCE.md)
-- [Validation strategy](research_docs/VALIDATION_PLAN.md)
-- [Current research roadmap](research_docs/ROADMAP.md)
-- [Data dictionary and provenance](research_docs/DATA_DICTIONARY_AND_PROVENANCE.md)
-
-### Curated analysis tables
-
-- [Monthly 2019–2025 environmental dataset](docs/data/hakaluki_monthly_2019_2025.csv)
-- [Data completeness and missingness](docs/data/complete_data_quality_2019_2025.csv)
-- [Detailed variable completeness](docs/data/hakaluki_2019_2025_data_quality.csv)
-- [Exploratory month-lag correlations](docs/data/monthly_lag_screen.csv)
-- [Preliminary model comparison](docs/data/exploratory_year_holdout_models.csv)
-- [Monthly seasonal anomaly table](docs/data/seasonally_adjusted_anomalies.csv)
-- [Data completeness summary](docs/data/data_completeness.csv)
-
-## Reproducibility
-
-Source processing notebooks are in `notebooks/`; reusable modules in `src/`; GEE scripts in `gee/`. The original unedited boundary, potentially large rasters, authenticated settings, and intermediate datasets may remain local or be published in a suitable versioned research archive. Do not assume that the complete Earth Engine archive is included in a GitHub clone. See [`research_docs/GITHUB_PUBLISHING_GUIDE.md`](research_docs/GITHUB_PUBLISHING_GUIDE.md).
-
-## What has been established versus what is next
-
-| Current status | Evidence / next experiment |
-|---|---|
-| **Processed** | 84 monthly environmental records; 18 GeoTIFF exports inventoried locally |
-| **Preliminary** | Satellite-derived low-VV water-screen patterns; exploratory XCH₄ statistics and machine-learning benchmarks |
-| **Validation needed** | Independent flood labels, vegetated inundation detection, SAR sensitivity, cloud/retrieval QA, spatial and temporal generalization |
-| **Planned** | ESA Biomass P-band coverage and pilot comparison; Sentinel-5A feasibility; meteorology-informed methane transport/inversion |
-| **Future calibration** | Local chamber/flux measurements and independent site-based methane model evaluation |
-
-## Relevant literature and mission documentation
-
-- [Saunois et al. (2025), *Global Methane Budget 2000–2020*](https://doi.org/10.5194/essd-17-1873-2025)
-- [ESA Biomass data open to researchers (26 January 2026)](https://www.esa.int/Applications/Observing_the_Earth/FutureEO/Biomass/ESA_s_Biomass_goes_live_with_data_now_open_to_all)
-- [ESA Biomass MAAP product catalogue](https://portal.maap.eo.esa.int/biomass/biomass-data-offer/)
-- [ESA Sentinel-5 mission](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-5)
-
-## Attribution and research integrity
-
-Satellite data remain subject to their providers’ terms. Maps are derived products, not official flood maps. No claim is made of field-validated methane flux, local emission inventories, or causal attribution. See the output manifest for reproducible file hashes.
+---
 
 
 <!-- BIOMASS_2026_START -->
@@ -227,4 +243,3 @@ are still required.
 or sensor-superiority claim are presented from this experiment.**
 
 <!-- BIOMASS_2026_END -->
-
