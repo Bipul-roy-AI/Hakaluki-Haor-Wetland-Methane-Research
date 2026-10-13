@@ -1,0 +1,1 @@
+site_id,date_time_local,longitude,latitude,habitat,measurement_type,flux_value,flux_unit,water_depth_cm,water_temp_c,air_temp_c,soil_temp_c,soil_ph,dissolved_oxygen_mg_l,instrument,measurement_duration_min,quality_flag,notes

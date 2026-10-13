@@ -1,0 +1,12 @@
+{
+  "months": 84,
+  "methane_available": 69,
+  "rasters": 18,
+  "featured_figures": 28,
+  "curated_csv": 7,
+  "source_monthly_csv": "data\\processed\\hakaluki_monthly_2019_2025.csv",
+  "cache_fingerprint": "11d6b74f88543283fc05",
+  "generated_utc": "2026-10-13T19:42:05.004695+00:00",
+  "methane_note": "XCH4 missingness counted, not vetted for native-footprint retrieval quality",
+  "status": "exploratory_not_field_calibrated"
+}

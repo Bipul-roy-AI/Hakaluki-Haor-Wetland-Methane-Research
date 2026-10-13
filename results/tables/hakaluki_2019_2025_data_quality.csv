@@ -1,0 +1,8 @@
+variable,valid_months,missing_months,missing_percent
+water_area_km2,84,0,0.0
+rain_chirps_mm,84,0,0.0
+temp2m_era5_c,84,0,0.0
+ch4_xch4_ppb_roi,69,15,17.86
+ch4_l3_grid_coverage_fraction,84,0,0.0
+ndvi_s2_mean,84,0,0.0
+mndwi_s2_mean,84,0,0.0

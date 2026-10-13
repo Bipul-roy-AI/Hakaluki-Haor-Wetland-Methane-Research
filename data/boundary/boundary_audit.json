@@ -1,0 +1,16 @@
+{
+  "area_km2": 172.291,
+  "reference_area_km2": 181.15,
+  "area_ratio_to_reference": 0.951,
+  "bounds_wgs84": [
+    91.9524,
+    24.57815,
+    92.12167,
+    24.73476
+  ],
+  "overlaps_reference_envelope": true,
+  "feature_count": 1,
+  "provenance": "User-supplied Hakaluki_Haor.shp; independently verify original source.",
+  "source_file": "F:\\Wetland Test\\Hakaluki_Haor_Wetland_Test_Jupyter_GEE_Project\\Study area\\Hakaluki_Haor.shp",
+  "source_status": "user-supplied boundary; geometry and provenance NOT independently verified"
+}

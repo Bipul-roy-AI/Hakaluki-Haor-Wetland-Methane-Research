@@ -1,0 +1,7 @@
+variable,available,missing
+water_area_km2,84,0
+rain_chirps_mm,84,0
+temp2m_era5_c,84,0
+ch4_xch4_ppb_roi,69,15
+ch4_xch4_ppb_ring,74,10
+ch4_roi_minus_ring_ppb,68,16

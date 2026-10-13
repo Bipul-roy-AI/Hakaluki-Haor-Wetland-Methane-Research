@@ -1,0 +1,17 @@
+# Install in a fresh Python 3.11 or 3.12 virtual environment
+earthengine-api>=1.5
+geemap>=0.35
+geopandas>=1.0
+shapely>=2.0
+pyproj>=3.6
+requests>=2.31
+numpy>=1.26
+pandas>=2.1
+matplotlib>=3.8
+scipy>=1.11
+scikit-learn>=1.4
+statsmodels>=0.14
+xgboost>=2.0
+jupyterlab>=4.0
+ipykernel>=6.0
+pytest>=8.0

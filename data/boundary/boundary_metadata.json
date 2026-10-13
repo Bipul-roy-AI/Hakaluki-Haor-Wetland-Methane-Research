@@ -1,0 +1,18 @@
+{
+    "study_area": "Hakaluki Haor",
+    "source": "User-provided shapefile",
+    "source_crs": "EPSG:4326",
+    "analysis_crs": "EPSG:32646",
+    "geometry_valid": true,
+    "projected_area_km2": 172.2907138594348,
+    "geodesic_area_km2": 172.38945889157534,
+    "stored_attribute_area_km2": 173.016431551,
+    "bounds_wgs84": [
+        91.95239990157613,
+        24.578145619212663,
+        92.12166605592563,
+        24.734758185768793
+    ],
+    "created_utc": "2026-10-12T22:03:24.902803+00:00",
+    "validation_status": "geometry_passed_source_unverified"
+}

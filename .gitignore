@@ -1,0 +1,37 @@
+# Python and Jupyter
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
+
+# Credentials and authentication
+credentials.json
+token.json
+*oauth*.json
+*.pem
+*.key
+
+# Local configuration (review before sharing)
+config/settings.json
+
+# Large or temporary data
+results/rasters/
+data/raw/
+*.zip
+*.log
+
+# Generated release copies
+results/github_release/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Local backups and scratch notebooks
+backup_before_local_configuration/
+Untitled.ipynb
+notebooks/Untitled.ipynb
