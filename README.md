@@ -51,7 +51,7 @@ Available-month, calendar-month-deseasonalized Spearman correlations were near z
 
 The following figures **are present in this repository** and render directly on this README. The 2022 water-screen figure comes from earlier exploratory processing, **not necessarily the same algorithm as Notebook 09**.
 
-### Study polygon (researcher supplied; boundary provenance unverified)
+### Hakaluki Haor study area
 
 ![Hakaluki study-area boundary](docs/assets/figures/hakaluki_boundary_audit_map.png)
 
@@ -81,7 +81,7 @@ These will be embedded once their files are committed. No broken placeholder ima
 
 | Critical gap | Work needed |
 |---|---|
-| **Validated flood area / flooded vegetation** | Independently interpreted reference imagery or field labels; threshold and orbit sensitivity; confusion matrices and area uncertainty |
+| **Validated flood area / flooded vegetation** | Independent high-resolution reference imagery and/or field observations; threshold and orbit sensitivity; confusion matrices and area uncertainty |
 | **Confirmed 2022 flash-flood onset or cause** | Event-scale radar acquisition timing, rain/gauge/water-level evidence, control for seasonal or permanent water |
 | **Local methane emission rates** | Flux measurements or defensible atmospheric inversion; XCH4 alone cannot supply flux |
 | **Reliable methane response to June 2022** | Native TROPOMI Level-2 QA, real retrieval footprints, cloud/aerosol filters, wind and source-transport diagnostics; June 2022 Level-3 ROI value currently missing |
