@@ -25,7 +25,7 @@ The most informative outcome is **not a measured methane release**. Rather, we o
 
 **Read the detailed research findings, non-findings and remaining work:** [Findings and limitations, 2019–2025](research_docs/FINDINGS_2019_2025_AND_LIMITATIONS.md).
 
-**Public-reproducibility status:** The precise results above were reported from completed **local** Jupyter Notebook 09–11 runs. **Notebooks 09–11 are now publicly committed; their executed CSVs, reports and newest figures remain on the local analysis computer until the publication sync runs.** Published older 2022 visualizations may use a different screening method; they should not be assumed equivalent to the fixed −17 dB 2019–2025 series. Local execution logs are not a substitute for independent validation.
+**Public-reproducibility status:** The precise results above were reported from completed **local** Jupyter Notebook 09–11 runs. **Notebooks 09–11, 14 figures, 26 tables/manifests and two scientific reports are now published on GitHub.** Published older 2022 visualizations may use a different screening method; they should not be assumed equivalent to the fixed −17 dB 2019–2025 series. Local execution logs are not a substitute for independent validation.
 
 ## What is important scientifically
 
@@ -49,7 +49,7 @@ Available-month, calendar-month-deseasonalized Spearman correlations were near z
 
 ## Visual results already published on GitHub
 
-The following figures **are present in this repository** and render directly on this README. The 2022 water-screen figure comes from earlier exploratory processing, **not necessarily the same algorithm as Notebook 09**.
+The following figures are from the **earlier exploratory workflow**, and may use different screening definitions from Notebook 09. The 14 **newer Notebook 09–11 figures** are embedded in the [updated results gallery](#updated-20192025-results-published-source-files).
 
 ### Hakaluki Haor study area
 
@@ -73,9 +73,9 @@ The following figures **are present in this repository** and render directly on 
 
 ![Exploratory relationships from an earlier workflow](docs/assets/figures/04_exploratory_correlations.png)
 
-**Executed figures generated locally and awaiting Git upload:** `inundation09_annual_lowvv_frequency_2019_2025.png`, `inundation09_june2022_spatial_lowvv_departure.png`, `hydro10_2022_radar_rainfall_departures.png`, `hydro10_deseasonalized_lag_associations.png`, `methane11_observation_selection_bias.png`, `methane11_coverage_sensitive_scatter.png`.
+**Newly published figures, embedded in the results gallery below:** `inundation09_annual_lowvv_frequency_2019_2025.png`, `inundation09_june2022_spatial_lowvv_departure.png`, `hydro10_2022_radar_rainfall_departures.png`, `hydro10_deseasonalized_lag_associations.png`, `methane11_observation_selection_bias.png`, `methane11_coverage_sensitive_scatter.png`.
 
-The [publishing helper](tools/publish_notebooks_09_11.py) copies these from the executed Windows project and embeds them only once real image files are committed.
+The [publishing helper](tools/publish_notebooks_09_11.py) was used to commit these figures; it can synchronize future regenerated outputs.
 
 ## What we cannot claim yet
 
@@ -87,7 +87,7 @@ The [publishing helper](tools/publish_notebooks_09_11.py) copies these from the 
 | **Reliable methane response to June 2022** | Native TROPOMI Level-2 QA, real retrieval footprints, cloud/aerosol filters, wind and source-transport diagnostics; June 2022 Level-3 ROI value currently missing |
 | **Generalizable climate prediction** | Stronger held-out evaluation, uncertainty and alternative baselines; avoid overfitting seven years of data |
 | **P-band superiority** | Independent water/flooded vegetation labels, noise-floor studies, compatible calibration, temporal/geometry controls |
-| **Entirely public reproduction** | Notebook 09–11 source code is public; upload executed figures, CSVs, manifests and reports, then verify a clean reproduction |
+| **Independent reproduction** | Code, tables, figures, manifests and reports are published. An independent end-to-end rerun and validation remain to be done. |
 
 ## Research questions and methods
 
@@ -106,14 +106,14 @@ The [publishing helper](tools/publish_notebooks_09_11.py) copies these from the 
 - [11 — TROPOMI atmospheric methane observation QA](notebooks/11_tropomi_methane_qa_2019_2025.ipynb)
 - [Publish locally executed figures, tables and reports](tools/publish_notebooks_09_11.py)
 
-**Code publication does not equal re-execution or independent scientific validation.** The executed result files are not yet present on GitHub.
+**Notebooks and executed result files are published; independent scientific re-execution and validation remain outstanding.**
 
 ## Available data and reproducibility
 
 - [Published 2019–2025 monthly environmental table](docs/data/hakaluki_monthly_2019_2025.csv) — original processing, not a substitute for the later Notebook 09 reanalysis.
 - [Observation completeness table](docs/data/complete_data_quality_2019_2025.csv).
 - [Earlier exploratory lag results](docs/data/monthly_lag_screen.csv) and [year-held-out models](docs/data/exploratory_year_holdout_models.csv); methods may differ from Notebook 10.
-- Public `notebooks/` now includes **00–11**; executed Notebooks 09–11 result figures, CSVs and reports remain pending upload. Reusable code is under `src/` and `gee/`.
+- Public `notebooks/` includes **00–11**; selected outputs are available below and in `docs/assets/` and `research_docs/reports/`. Reusable code is under `src/` and `gee/`.
 - Selected study boundary files, derived figures and Biomass cross-sensor statistical tables are published; some raw scenes, large intermediate rasters and Earth Engine data collections remain outside Git. See [safe publishing guidance](research_docs/GITHUB_PUBLISHING_GUIDE.md).
 
 **Research integrity:** Independent researcher-led project, thematically related to the University of Leeds PhD topic *Magnitude and Controls of Tropical Wetland Methane Emissions Using Novel Satellite Data* (PGR-P-2558), **not** a University of Leeds or ESA collaboration. No official flood map, independently calibrated methane flux, or causal attribution is claimed.
