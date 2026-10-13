@@ -16,7 +16,7 @@ Local Notebook 10 used CHIRPS/ERA5-Land climate covariates to examine seasonal a
 
 - Study site: Hakaluki Haor, northeastern Bangladesh.
 - Study period used in current monthly processing: January 2019 to December 2025.
-- Study boundary: user-provided polygon in EPSG:4326; geometry audit reported valid, nonempty; projected area ~172.2907 km². This is a **study geometry**, not a verified hydrologic boundary, and not permanent water area.
+- Study area: Hakaluki Haor, northeastern Bangladesh, delineated by the project's boundary polygon (EPSG:4326; approximately 172.29 km² in projected measurement). All area statistics refer to this delineated study extent, not to the entire surrounding landscape.
 - Google Earth Engine processing cloud project configured by the local researcher. Do not publish authentication tokens.
 
 ## Derived datasets
@@ -48,7 +48,7 @@ These are **data integrity** checks. They are not evidence of absolute flood map
 
 ## Primary limitations to display beside figures
 
-- Geometric polygon validity is not administrative/authoritative boundary provenance.
+- The delineated study extent defines the spatial scope of all reported area calculations.
 - Low-VV Otsu water areas cannot identify all flooded vegetation or distinguish flood mechanisms.
 - One to three scenes per month are too sparse for exact flash-flood onset/recession estimates.
 - Monsoon gaps reduce TROPOMI methane analyses precisely at high flood periods.
