@@ -1,0 +1,7 @@
+target,predictor,minimum_l3_grid_support,n_observed_months,spearman_rho_deseasonalized,validity
+ch4_xch4_ppb_roi,nominal_lowvv_km2,0.0,66,-0.013357761230915336,exploratory; native L2 QA not checked; background trend and missingness unresolved
+ch4_xch4_ppb_roi,nominal_lowvv_km2,0.05,65,-0.016704117776922725,exploratory; native L2 QA not checked; background trend and missingness unresolved
+ch4_xch4_ppb_roi,nominal_lowvv_km2,0.2,64,-0.05232271729432937,exploratory; native L2 QA not checked; background trend and missingness unresolved
+ch4_roi_minus_ring_ppb,nominal_lowvv_km2,0.0,63,0.0487675717311766,exploratory; native L2 QA not checked; background trend and missingness unresolved
+ch4_roi_minus_ring_ppb,nominal_lowvv_km2,0.05,63,0.0487675717311766,exploratory; native L2 QA not checked; background trend and missingness unresolved
+ch4_roi_minus_ring_ppb,nominal_lowvv_km2,0.2,62,0.025889722411659218,exploratory; native L2 QA not checked; background trend and missingness unresolved

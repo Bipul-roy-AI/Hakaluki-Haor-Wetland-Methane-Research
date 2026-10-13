@@ -1,0 +1,2 @@
+config_hash,target_month,comparison_years,min_reference_years,roi_grid_pixels,eligible_grid_pixels,eligible_fraction,median_binary_minus_frequency,is_validated_flood_extent,source_raster
+cf23edea0ce7f8fb,2022-06,"2019,2020,2021,2023,2024,2025",3,191413,191413,1.0,0.1666666716337204,False,results\rasters\inundation_2019_2025\HAKALUKI_JUNE2022_vs_2019_2025_cf23edea0ce7f8fb_30m.tif

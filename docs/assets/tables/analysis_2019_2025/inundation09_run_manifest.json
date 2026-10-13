@@ -1,0 +1,25 @@
+{
+  "notebook": "09_inundation_dynamics_2019_2025_QA_v2.ipynb",
+  "period": "2019-2025",
+  "method_status": "exploratory_lowVV_screening_not_validated_flood_map",
+  "reference": "COPERNICUS/S1_GRD; consistent IW VV/VH track",
+  "pass": "ASCENDING",
+  "relative_orbit": 41,
+  "config_hash": "cf23edea0ce7f8fb",
+  "thresholds_db": [
+    -19.0,
+    -17.0,
+    -15.0
+  ],
+  "analysis_grid_m": 30,
+  "mask_restored_after_spatial_filter": true,
+  "ee_sampled_polygon_area_km2": 172.38441891612476,
+  "total_months": 84,
+  "months_with_scenes": 84,
+  "eligible_months": 84,
+  "single_scene_months": 1,
+  "annual_rasters_downloaded": 7,
+  "validation": "not performed",
+  "june2022_spatial_raster_exported": true,
+  "generated_utc": "2026-10-13T22:30:32.911166+00:00"
+}

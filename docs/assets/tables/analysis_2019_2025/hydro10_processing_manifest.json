@@ -1,0 +1,33 @@
+{
+  "notebook": "10_hydroclimatic_controls_2019_2025.ipynb",
+  "created_utc": "2026-10-13T22:43:27.289056+00:00",
+  "period": "2019-01 through 2025-12",
+  "method_status": "exploratory_not_validated_flood_map",
+  "monthly_s1_source": "results/tables/inundation09_monthly_2019_2025.csv",
+  "hydroclimate_source": "data/processed/hakaluki_monthly_2019_2025.csv",
+  "s1_config_hash": "cf23edea0ce7f8fb",
+  "s1_pass": "ASCENDING",
+  "s1_relative_orbit": 41,
+  "nominal_threshold_db": -17.0,
+  "rainfall_column": "rain_chirps_mm",
+  "temperature_column": "temp2m_era5_c",
+  "climate_sources": "CHIRPS daily aggregated monthly; ERA5-Land monthly aggregate (existing study CSV)",
+  "n_months_radar_eligible": 84,
+  "n_months_joint_rain_temperature": 84,
+  "year_held_out_months": 82,
+  "predictor_lags": [
+    0,
+    1,
+    2
+  ],
+  "descriptive_lags_audited": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "validation": "year-held-out prediction only; no independent surface-water validation",
+  "causation_claimed": false,
+  "methane_flux_estimated": false,
+  "network_access_used": false
+}

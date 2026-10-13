@@ -1,0 +1,28 @@
+{
+  "version": "09.2-preserved-mask-matched-area",
+  "years": [
+    2019,
+    2025
+  ],
+  "pass_name": "ASCENDING",
+  "relative_orbit": 41,
+  "vv_thresholds_db": [
+    -19.0,
+    -17.0,
+    -15.0
+  ],
+  "angle_limits": [
+    30.0,
+    45.0
+  ],
+  "focal_median_radius_m": 30,
+  "preserve_original_scene_mask": true,
+  "reduce_scale_m": 30,
+  "pixel_area_denominator": "EE_same_grid",
+  "min_coverage": 0.9,
+  "roi_wkb_sha256": "0c650af9d1de721177a84ad98fddc7a222a93773e01e5fa90d4598c78844deea",
+  "ee_collection": "COPERNICUS/S1_GRD",
+  "monthly_time_zone": "UTC",
+  "config_hash": "cf23edea0ce7f8fb",
+  "status": "exploratory_not_validated"
+}

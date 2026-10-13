@@ -1,0 +1,21 @@
+{
+  "notebook": "11_tropomi_methane_qa_2019_2025.ipynb",
+  "generated_utc": "2026-10-13T22:53:25.721747+00:00",
+  "source_csv": "data/processed/hakaluki_monthly_2019_2025.csv",
+  "source_csv_sha256": "adc4af4db8f60958e402d762b1af4438ae90026bbaff3105ab3ba3254362dd66",
+  "radar_csv": "results/tables/inundation09_monthly_2019_2025.csv",
+  "radar_csv_sha256": "2525bc22c34a677654e5c15bcb02ae6b51c0b0c74a6e51205f335e9d600a7553",
+  "total_months": 84,
+  "roi_xch4_months": 69,
+  "roi_minus_ring_months": 68,
+  "data_product": "COPERNICUS/S5P/OFFL/L3_CH4",
+  "monthly_xch4_band": "CH4_column_volume_mixing_ratio_dry_air_bias_corrected",
+  "l3_grid_coverage_is_native_retrieval_fraction": false,
+  "native_l2_sounding_qa_verified": false,
+  "native_pixel_footprints_verified": false,
+  "retrieval_uncertainty_propagated": false,
+  "atmospheric_transport_accounted_for": false,
+  "attribution_to_local_methane_flux": false,
+  "correlations_causal": false,
+  "known_provider_gap": "2022-07-26 through 2022-08-31"
+}
