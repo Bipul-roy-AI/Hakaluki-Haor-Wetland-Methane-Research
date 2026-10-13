@@ -124,10 +124,7 @@ def prepare_readme(repo: Path, images: list[str], notebooks: list[str], tables: 
     if original.count(BEGIN) != original.count(END):
         raise ValueError("Existing README has unbalanced result-gallery markers")
 
-    lines = ["## Updated 2019–2025 results: published source files",
-             "", "These figures and tables come from local Notebooks 09–11 and remain "
-             "**exploratory observations**, not independent validation of inundation, "
-             "methane flux, or causation.", ""]
+    lines = ["## 2019–2025 Inundation, Hydroclimate and Methane Results", ""]
     for image in images:
         name, note = FIGURES[image]
         lines += ["### " + name, "",
