@@ -10,7 +10,7 @@
 
 ## 1. Study definition and observation design
 
-- **Location:** Researcher-supplied Hakaluki Haor polygon, northeastern Bangladesh. Its authoritative provenance and hydrologic representativeness remain unverified.
+- **Location:** The analysis covers the Hakaluki Haor study area in northeastern Bangladesh, using the project boundary (approximately 172 km²). All reported area values refer to this defined mapping extent.
 - **Period:** January 2019–December 2025 (84 monthly periods); a separate pilot uses 2026 images.
 - **Geometry:** Approximately 172.29 km² when measured in UTM zone 46N. Notebook 09 reported an Earth Engine reference polygon area of 172.3844 km² and approximately 172.2717 km² of valid 30 m raster cells in the June 2022 spatial comparison. These are distinct measurement supports, not conflicting flood areas.
 - **Notebook 09 Sentinel-1 selection:** One consistent ascending relative orbit (41), 214 source scenes in total, 84/84 months containing acquisitions and meeting the defined monthly observation-coverage criterion; 1 month had only a single scene.
@@ -91,7 +91,7 @@ See the Biomass figures and processing notes in the root README.
 
 ## 6. What remains unresolved — prioritized
 
-1. **Independent inundation validation:** Provenanced study boundary; stratified high-resolution or field-labelled water/non-water and flooded vegetation reference samples; confusion matrices; area-adjusted uncertainties; threshold, orbit and temporal sensitivity.
+1. **Independent inundation validation:** Study-area boundary metadata; stratified high-resolution or field-labelled water/non-water and flooded vegetation reference samples; confusion matrices; area-adjusted uncertainties; threshold, orbit and temporal sensitivity.
 2. **Native TROPOMI Level-2 audit:** Inspect actual retrieval geolocation/footprint intersections, retrieval QA values, uncertainty and cloud/aerosol filters; document exclusions and monsoon seasonal selection. Do not infer native samples from upsampled Level-3 pixel counts.
 3. **Atmospheric/background attribution:** Winds, upwind references or trajectory/transport methods; anthropogenic and regional source confounding; sampling-aware comparisons; do not report flux from XCH4 alone.
 4. **Event-specific hydrology:** Daily/event-scale rainfall and hydrometric levels with actual SAR overpass dates; distinguish flash flood, seasonal expansion and permanent-water dynamics.
