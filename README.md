@@ -121,6 +121,136 @@ The [publishing helper](tools/publish_notebooks_09_11.py) copies these from the 
 ---
 
 
+<!-- LOCAL_2019_2025_RESULTS_START -->
+## Updated 2019–2025 results: published source files
+
+These figures and tables come from local Notebooks 09–11 and remain **exploratory observations**, not independent validation of inundation, methane flux, or causation.
+
+### Monthly low-VV screening, 2019–2025
+
+![Monthly low-VV screening, 2019–2025](docs/assets/figures/analysis_2019_2025/inundation09_monthly_screening_timeseries.png)
+
+*Low-VV detections are not validated flooded-water area.*
+
+### Low-VV detections by calendar month and year
+
+![Low-VV detections by calendar month and year](docs/assets/figures/analysis_2019_2025/inundation09_month_year_heatmap.png)
+
+*A fixed VV threshold was used; color is an unvalidated screening statistic.*
+
+### 2022 monthly differences relative to other years
+
+![2022 monthly differences relative to other years](docs/assets/figures/analysis_2019_2025/inundation09_2022_month_matched_departures.png)
+
+*Differences compare screening areas, not confirmed additional floodwater.*
+
+### Annual observation-normalized low-VV occurrence, 2019–2025
+
+![Annual observation-normalized low-VV occurrence, 2019–2025](docs/assets/figures/analysis_2019_2025/inundation09_annual_lowvv_frequency_2019_2025.png)
+
+*The denominator is the number of valid observed months per pixel; not an inundation probability.*
+
+### June 2022 spatial difference from historical June screening frequency
+
+![June 2022 spatial difference from historical June screening frequency](docs/assets/figures/analysis_2019_2025/inundation09_june2022_spatial_lowvv_departure.png)
+
+*Per-pixel binary-minus-frequency departure; not a flood-area-change map.*
+
+### Rainfall, temperature and low-VV screening series
+
+![Rainfall, temperature and low-VV screening series](docs/assets/figures/analysis_2019_2025/hydro10_timeseries_rain_temperature_lowvv.png)
+
+*Monthly covariates, not causal drivers or flood verification.*
+
+### Seasonal cycle of hydroclimate and low-VV screening
+
+![Seasonal cycle of hydroclimate and low-VV screening](docs/assets/figures/analysis_2019_2025/hydro10_seasonal_cycle.png)
+
+*Descriptive monthly aggregation.*
+
+### 2022 radar and rainfall departures
+
+![2022 radar and rainfall departures](docs/assets/figures/analysis_2019_2025/hydro10_2022_radar_rainfall_departures.png)
+
+*Coincidence does not establish causal flooding.*
+
+### Deseasonalized hydroclimatic associations
+
+![Deseasonalized hydroclimatic associations](docs/assets/figures/analysis_2019_2025/hydro10_deseasonalized_lag_associations.png)
+
+*Serial correlation and multiple comparisons limit inference.*
+
+### Out-of-year climate-model hindcasts versus seasonal baseline
+
+![Out-of-year climate-model hindcasts versus seasonal baseline](docs/assets/figures/analysis_2019_2025/hydro10_leave_year_out_hindcast.png)
+
+*Predictive performance is mixed across years.*
+
+### TROPOMI XCH4 month-by-month availability and Level-3 grid support
+
+![TROPOMI XCH4 month-by-month availability and Level-3 grid support](docs/assets/figures/analysis_2019_2025/methane11_availability_and_grid_support.png)
+
+*Level-3 coverage does not equal native Level-2 retrieval footprints.*
+
+### Atmospheric XCH4 inside the ROI and in a reference ring
+
+![Atmospheric XCH4 inside the ROI and in a reference ring](docs/assets/figures/analysis_2019_2025/methane11_roi_ring_time_series.png)
+
+*Column concentrations are not local methane emissions.*
+
+### Methane observation availability across low-VV screening conditions
+
+![Methane observation availability across low-VV screening conditions](docs/assets/figures/analysis_2019_2025/methane11_observation_selection_bias.png)
+
+*Wet-season missingness creates observational selection bias.*
+
+### Available-month XCH4 versus low-VV anomalies
+
+![Available-month XCH4 versus low-VV anomalies](docs/assets/figures/analysis_2019_2025/methane11_coverage_sensitive_scatter.png)
+
+*Near-zero associations cannot rule out wetland methane flux responses.*
+
+### Reproducible analysis notebooks
+
+- [09_inundation_dynamics_2019_2025_QA_v2.ipynb](notebooks/09_inundation_dynamics_2019_2025_QA_v2.ipynb)
+- [10_hydroclimatic_controls_2019_2025.ipynb](notebooks/10_hydroclimatic_controls_2019_2025.ipynb)
+- [11_tropomi_methane_qa_2019_2025.ipynb](notebooks/11_tropomi_methane_qa_2019_2025.ipynb)
+
+### Scientific interpretation reports
+
+- [NOTEBOOK10_HYDROCLIMATE_FINDINGS.md](research_docs/reports/NOTEBOOK10_HYDROCLIMATE_FINDINGS.md)
+- [NOTEBOOK11_TROPOMI_QA_FINDINGS.md](research_docs/reports/NOTEBOOK11_TROPOMI_QA_FINDINGS.md)
+
+### Analysis result tables
+
+- [inundation09_s1_scene_inventory.csv](docs/assets/tables/analysis_2019_2025/inundation09_s1_scene_inventory.csv)
+- [inundation09_track_selection.csv](docs/assets/tables/analysis_2019_2025/inundation09_track_selection.csv)
+- [inundation09_processing_parameters.json](docs/assets/tables/analysis_2019_2025/inundation09_processing_parameters.json)
+- [inundation09_monthly_2019_2025.csv](docs/assets/tables/analysis_2019_2025/inundation09_monthly_2019_2025.csv)
+- [inundation09_annual_coverage_qa.csv](docs/assets/tables/analysis_2019_2025/inundation09_annual_coverage_qa.csv)
+- [inundation09_2022_month_matched_departures.csv](docs/assets/tables/analysis_2019_2025/inundation09_2022_month_matched_departures.csv)
+- [inundation09_annual_raster_coverage_qa.csv](docs/assets/tables/analysis_2019_2025/inundation09_annual_raster_coverage_qa.csv)
+- [inundation09_june2022_spatial_qa.csv](docs/assets/tables/analysis_2019_2025/inundation09_june2022_spatial_qa.csv)
+- [inundation09_june2022_spatial_summary.csv](docs/assets/tables/analysis_2019_2025/inundation09_june2022_spatial_summary.csv)
+- [inundation09_run_manifest.json](docs/assets/tables/analysis_2019_2025/inundation09_run_manifest.json)
+- [hydro10_merged_monthly_2019_2025.csv](docs/assets/tables/analysis_2019_2025/hydro10_merged_monthly_2019_2025.csv)
+- [hydro10_annual_input_qa.csv](docs/assets/tables/analysis_2019_2025/hydro10_annual_input_qa.csv)
+- [hydro10_monthly_seasonal_climatology.csv](docs/assets/tables/analysis_2019_2025/hydro10_monthly_seasonal_climatology.csv)
+- [hydro10_2022_month_matched_departures.csv](docs/assets/tables/analysis_2019_2025/hydro10_2022_month_matched_departures.csv)
+- [hydro10_deseasonalized_associations.csv](docs/assets/tables/analysis_2019_2025/hydro10_deseasonalized_associations.csv)
+- [hydro10_leave_year_out_predictions.csv](docs/assets/tables/analysis_2019_2025/hydro10_leave_year_out_predictions.csv)
+- [hydro10_leave_year_out_model_metrics.csv](docs/assets/tables/analysis_2019_2025/hydro10_leave_year_out_model_metrics.csv)
+- [hydro10_2022_context_and_heldout_residuals.csv](docs/assets/tables/analysis_2019_2025/hydro10_2022_context_and_heldout_residuals.csv)
+- [hydro10_processing_manifest.json](docs/assets/tables/analysis_2019_2025/hydro10_processing_manifest.json)
+- [methane11_annual_availability.csv](docs/assets/tables/analysis_2019_2025/methane11_annual_availability.csv)
+- [methane11_monthly_availability.csv](docs/assets/tables/analysis_2019_2025/methane11_monthly_availability.csv)
+- [methane11_seasonal_availability.csv](docs/assets/tables/analysis_2019_2025/methane11_seasonal_availability.csv)
+- [methane11_selection_bias_strata.csv](docs/assets/tables/analysis_2019_2025/methane11_selection_bias_strata.csv)
+- [methane11_coverage_sensitive_associations.csv](docs/assets/tables/analysis_2019_2025/methane11_coverage_sensitive_associations.csv)
+- [methane11_monthly_qa_joined.csv](docs/assets/tables/analysis_2019_2025/methane11_monthly_qa_joined.csv)
+- [methane11_qa_manifest.json](docs/assets/tables/analysis_2019_2025/methane11_qa_manifest.json)
+<!-- LOCAL_2019_2025_RESULTS_END -->
+
 <!-- BIOMASS_2026_START -->
 ## ESA Biomass P-band SAR — 2026 Research Extension
 
