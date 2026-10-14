@@ -88,7 +88,7 @@ The maps and plots below introduce the Hakaluki Haor study area and summarize th
 
 ## Next research stage
 
-1. **Scene-level SAR (priority):** Compare 2022, 2024 and 2025 (with 2023 as a lower-extent comparator) per acquisition; keep ascending and descending track estimates separate before interleaving time series. Align with CHIRPS daily rainfall while auditing date conventions and ±1-day timing sensitivity.
+1. **Scene-level SAR (priority):** [Notebook 12 — per-acquisition Sentinel-1 and CHIRPS](notebooks/12_scene_level_wetland_dynamics_2022_2025.ipynb) is now available as an **unexecuted workflow** comparing 2022, 2024, 2025 and 2023. It keeps the two passes separate and requires daily-rain label sensitivity checks. No new scene-level results have been claimed.
 2. **Hydrology and remote validation:** Seek water-level and upstream precipitation data; assess stage–area relation only if compatible stage/reference-area data exist; evaluate VV/VH thresholds and independent reference imagery.
 3. **Methane observability gate:** Audit native Level-2 footprints and quality for a small defined sample, then compare habitat-weighted source scenarios against sampling/transport variability. Proceed to detailed atmospheric attribution only if support is sufficient.
 4. **Model redesign:** Reevaluate hydrological predictors with year-blocked model selection and a common observation sample; keep post-hoc α and harmonic alternatives exploratory.
