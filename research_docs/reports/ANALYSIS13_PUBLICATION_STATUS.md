@@ -1,32 +1,31 @@
-# Analysis 13 publication audit — 15 October 2026
+# Analysis 13 — publication status and scientific boundaries
 
-## Confirmed from the user's Windows inventory
+**Updated:** 15 October 2026
 
-- Seven notebook files: 13A, 13B, 13C, 13D, original 13E, 13E continuation, and 13F.
-- 13A–13F CSV and JSON outputs, including 18-row completed 13B spatial transition table, 13E same-date tile-union QA and 13F hypothetical scenarios.
-- Ten selected Analysis 13 figures: two 13A, six 13B, one 13C and one 13F.
-- Unit test file `tests/test_analysis13.py`.
-- Publishing clone exists on `main`, points to the expected GitHub remote; no changes were shown by `git status --short`.
-- The source directory `src/analysis13/` was not listed because the PowerShell inventory filtered on filenames; its presence must be checked, not assumed absent.
+## Published repository contents
 
-## GitHub audit
+Analysis 13 was published on GitHub `main` in commit [bffa9af](https://github.com/Bipul-roy-AI/Hakaluki-Haor-Wetland-Methane-Research/commit/bffa9af2dc794d32a4478c0dcca14ce8704438ee). The repository includes seven notebooks (13A, 13B, 13C, 13D, two 13E workflows, 13F), eleven reusable source files, tests, 21 tables/manifests, ten figures, and the current full-project README.
 
-The GitHub `main` branch contains earlier Notebooks 09–12, selected scene-12 data and the shortened README. No Analysis 13 notebooks, code, figures, tables or reports were listed in the GitHub repository tree at audit time.
+- [Notebooks](../../notebooks/)
+- [Source](../../src/analysis13/)
+- [Analysis 13 tables](../../docs/assets/tables/analysis13/)
+- [Analysis 13 figures](../../docs/assets/figures/analysis13/)
+- [Reviewed six-pair spatial findings](ANALYSIS13B_REVIEWED_FINDINGS.md)
+- [Main research overview](../../README.md)
 
-## Publication posture
+## Defensible conclusions
 
-Publish 13A–13C as exploratory radar screening; 13D as hydrological chronology/data readiness; 13E as optical-reference usability assessment without accuracy claims; 13F as hypothetical methane detectability scenarios only. No independent water-class accuracy, measured methane flux, stage–area relation or causal flood-to-methane inference is supported.
+- **13A:** Paired VV/VH radiometry and fixed-point checks were performed. Radar-scattering change is not a validated water class.
+- **13B:** Six same-orbit spatial comparisons and three-threshold tables are complete. Strong transitions in May 2022 and June 2023 contrast with threshold-dependent June 2024 results.
+- **13C:** 94 Sentinel-1 scenes and 86 within-orbit intervals support observational radar chronology. Acquisition brackets do not prove exact flood onset.
+- **13D:** Screening chronology and input-availability assessment were completed. No historical upstream-rainfall forcing or river-stage series was incorporated for causal interpretation.
+- **13E:** Sentinel-2 scene discovery, optical usability checks and same-date tile-union QA were completed. **No independently interpreted water reference labels or classification accuracy were established.**
+- **13F:** 27 hypothetical methane flux/area/wind scenarios were evaluated. **No actual methane flux, source-attributable atmospheric signal, or native Level-2 audit was demonstrated** by those results.
 
-## What to exclude
+The 2019–2025 monthly analyses and October 2026 ESA Biomass pilot remain separate research components, documented in the main README and scientific reports.
 
-- `.ipynb_checkpoints/`, `__pycache__/`, `.venv/`, `.git/`, Earth Engine credentials, temporary exports and scene GeoTIFF caches.
-- The reviewed 13B ZIP itself (the CSV, six figures and report are staged individually).
-- Any blank reference-labelling templates represented as validated observations.
+## Provenance and limitations
 
-## Recommended process
+No field observations or verified regulatory wetland boundary are represented as available. CSVs, figures and notebooks are published as exploratory scientific products; the presence of code and completed calculations does not amount to independent validation or end-to-end reproduction.
 
-1. Run `stage_analysis13.ps1` in PowerShell from this kit's extracted folder. It checks paths, synchronizes the publishing clone, copies selected files without deleting originals, and stages them with Git **without committing or pushing**.
-2. Review `git diff --cached --stat` and `git diff --cached -- README.md` in the publishing clone.
-3. When satisfied, `git commit -m "Publish Analysis 13 exploratory findings and reproducibility package"` then `git push origin main`.
-
-The README draft should not be confused with proof that any additional remote-sensing processing was run.
+Older draft README and portfolio-generation materials may still be present to preserve historical project workflows. Readers should use the root `README.md` for the current research summary rather than assuming earlier templates represent the present evidence.
