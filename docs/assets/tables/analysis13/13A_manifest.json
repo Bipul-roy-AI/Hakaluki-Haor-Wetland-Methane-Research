@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-10-14T17:06:32.153139+00:00",
+  "status": "executed_radiometric_screening_not_validation",
+  "total_fixed_points": 550,
+  "scene_count": 11,
+  "pair_count": 6,
+  "same_coordinate_points": true,
+  "warning": "Threshold changes and backscatter shifts cannot alone classify water or determine flood severity."
+}

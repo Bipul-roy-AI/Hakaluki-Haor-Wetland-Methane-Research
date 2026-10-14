@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-10-14T18:32:29.644461+00:00",
+  "status": "executed_unvalidated_SAR_screening_change",
+  "pair_count": 6,
+  "grid_crs": "EPSG:32646",
+  "grid_cell_m": 30,
+  "grid_pixels": 330038,
+  "area_support": "common observed cell centres, not exact polygon-boundary EE pixelArea",
+  "spatial_map_files": {
+    "2022_may_expansion": "F:\\Wetland Test\\Hakaluki_Haor_Wetland_Test_Jupyter_GEE_Project\\results\\figures\\analysis13\\13B_2022_may_expansion_spatial_change.png",
+    "2022_june_stable": "F:\\Wetland Test\\Hakaluki_Haor_Wetland_Test_Jupyter_GEE_Project\\results\\figures\\analysis13\\13B_2022_june_stable_spatial_change.png",
+    "2023_june_expansion": "F:\\Wetland Test\\Hakaluki_Haor_Wetland_Test_Jupyter_GEE_Project\\results\\figures\\analysis13\\13B_2023_june_expansion_spatial_change.png",
+    "2024_june_early_to_mid": "F:\\Wetland Test\\Hakaluki_Haor_Wetland_Test_Jupyter_GEE_Project\\results\\figures\\analysis13\\13B_2024_june_early_to_mid_spatial_change.png",
+    "2024_june_mid_to_late": "F:\\Wetland Test\\Hakaluki_Haor_Wetland_Test_Jupyter_GEE_Project\\results\\figures\\analysis13\\13B_2024_june_mid_to_late_spatial_change.png",
+    "2025_may_june_descending": "F:\\Wetland Test\\Hakaluki_Haor_Wetland_Test_Jupyter_GEE_Project\\results\\figures\\analysis13\\13B_2025_may_june_descending_spatial_change.png"
+  },
+  "validation": "No independent water-class reference labels. Continuous backscatter change is not water-level change."
+}

@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-14T17:27:45.893905+00:00",
+  "status": "scene_chronology_completed_external_hydrology_pending",
+  "screening_cutoff_fraction": 0.85,
+  "reason": "An arbitrary screening criterion is not a true flood-onset rule.",
+  "stage_file": null,
+  "upstream_file": null,
+  "stage_blocker": "No actual station data at F:\\Wetland Test\\Hakaluki_Haor_Wetland_Test_Jupyter_GEE_Project\\data\\external\\hydrology\\observed_stage.csv. Obtain source/datum/station metadata.",
+  "upstream_blocker": "No measured/upstream basin rain data at F:\\Wetland Test\\Hakaluki_Haor_Wetland_Test_Jupyter_GEE_Project\\data\\external\\hydrology\\upstream_daily_rain.csv. Do not substitute local CHIRPS."
+}

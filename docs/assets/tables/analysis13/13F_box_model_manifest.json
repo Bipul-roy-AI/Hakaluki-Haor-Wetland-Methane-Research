@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-14T17:28:14.038110+00:00",
+  "status": "illustrative_box_model_only_NO_L2_sampling_and_NO_flux_estimate",
+  "n_scenarios": 27,
+  "ROI_area_km2": 172.38441891612476,
+  "can_infer_local_methane_flux": false,
+  "independent_retrieval_random_noise": null,
+  "systematic_transport_errors": null,
+  "L2_footprint_sampling_available": false,
+  "next_gate": "Audit actual native L2 footprints and product QA before any claim of detectability; a monthly XCH4 residual SD is NOT a per-sounding noise model.",
+  "model_assumptions": "uniform constant emission and wind over square source; perfect column mixing; no spatial dilution or averaging-kernel treatment."
+}

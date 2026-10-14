@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-10-14T17:09:17.310664+00:00",
+  "status": "exploratory_reanalysis_of_uploaded_scene12_outputs_not_earth_engine_rerun",
+  "n_scenes": 94,
+  "n_transitions": 86,
+  "n_same_sign": 66,
+  "n_strong_same_sign_20km2": 12,
+  "years": [
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "max_threshold_span_km2": 133.19901915697625,
+  "all_numerics_from": "scene12_S1_per_acquisition_2022_2025.csv",
+  "limitations": "Area screening is unvalidated; acquisition differences are not directly water change; fixed VV thresholds and orbit effects remain."
+}
