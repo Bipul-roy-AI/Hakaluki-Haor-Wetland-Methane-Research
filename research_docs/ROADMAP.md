@@ -22,7 +22,8 @@
 - [ ] Calculate per-scene low-VV area at −19/−17/−15 dB and cross-check histograms and VH context; produce plots with CHIRPS daily and 3/7-day rainfall windows.
 - [ ] Verify rainfall accumulation-day convention for the project's Earth Engine CHIRPS v2 daily series before aligning to local satellite dates. Show UTC/Bangladesh timestamps and ±1-day sensitivity.
 - [ ] Calculate per-pixel **observed-scene-normalized detection frequency** and first/last *observed* low-VV dates where support is sufficient. Do not label gaps as dry or equate sparse observations with continuous hydroperiod.
-- [ ] Deliver the new Notebook 12 scene-level output CSV, QA audit, plot(s), processing manifest and written comparison. **No scene-level processed results have been claimed as completed.**
+- [x] Publish the **unexecuted source** for [Notebook 12: per-scene SAR and daily rainfall](../notebooks/12_scene_level_wetland_dynamics_2022_2025.ipynb), plus [pure timing/QA helpers](../src/scene12_utils.py) and [helper tests](../tests/test_scene12_utils.py).
+- [ ] Run Notebook 12 with actual Earth Engine scenes, review quality/support, and publish its output CSV, figure(s), manifest and written comparison. **No Notebook 12 satellite analysis outputs are yet claimed as completed.**
 
 ## Work package B — Hydrological context and satellite validation
 
