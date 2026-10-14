@@ -74,7 +74,7 @@ def check_scene_areas(frame: pd.DataFrame, reference_km2: float,
 
 def describe_scene_support(frame: pd.DataFrame) -> pd.DataFrame:
     """Descriptive summaries; do not label maximum low-VV area as maximum flood."""
-    return (frame.groupby(["year", "orbit_pass", "relative_orbit"], dropna=False)
+    return (frame.groupby(["year", "pass", "relative_orbit"], dropna=False)
             .agg(n_scenes=("scene_id", "nunique"),
                  n_eligible=("eligible", "sum"),
                  first_acquisition_utc=("acquisition_utc", "min"),
