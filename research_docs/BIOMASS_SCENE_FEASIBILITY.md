@@ -1,20 +1,27 @@
-# ESA Biomass P-band feasibility for Hakaluki Haor
+# ESA Biomass P-band: feasibility plan and completed October 2026 pilot
 
-**Status: analysis designed, coverage not yet checked.** Public data availability does not guarantee valid scenes for this particular wetland or successful flood mapping.
+**Status:** A descriptive Hakaluki Haor P-band processing and cross-sensor pilot was subsequently completed. This document retains the original feasibility context, but statements that no scene was obtained are now superseded.
 
-ESA announced open Biomass data access in January 2026, following the April 2025 launch. ESA Biomass MAAP advertises Level 1A–1C SAR and Level 2A/B products. Start with geographic/time coverage and acquisition metadata before committing to direct backscatter comparison.
+## Completed pilot
 
-- Official ESA commissioning announcement: https://www.esa.int/Applications/Observing_the_Earth/FutureEO/Biomass/ESA_s_Biomass_goes_live_with_data_now_open_to_all
-- ESA MAAP Biomass data offer: https://portal.maap.eo.esa.int/biomass/biomass-data-offer/
-- ESA mission description: https://www.esa.int/Applications/Observing_the_Earth/FutureEO/Biomass
+The research repository documents the **2 October 2026** ESA Biomass fully polarimetric P-band acquisition, compared descriptively with **30 September 2026** Sentinel-1 and **7 October 2026** Sentinel-2 imagery. Four 25 m Gamma0 polarization images (HH, HV, VH, VV) were prepared; within-sensor polarization and MNDWI-stratified comparisons were performed.
 
-## Feasibility audit workflow
+- [Full project findings and figure gallery](../README.md#result-f--esa-biomass-p-band-imagery-adds-a-separate-descriptive-sensor-experiment-october-2026)
+- [Four-polarization image](../docs/assets/figures/biomass_2026/biomass_20261002_reference_gamma0_four_polarizations.png)
+- [Multisensor figure](../docs/assets/figures/biomass_2026/biomass_08W_multisensor_comparison.png)
+- [Polarization statistics](../docs/assets/tables/biomass_2026/biomass_08W_polarization_contrasts.csv)
+- [Processing comparison](../docs/assets/tables/biomass_2026/biomass_08S_matched_gamma0_processor_comparison.csv)
 
-1. Search ESA MAAP catalog for imagery with coverage intersecting Hakaluki Haor (rough bounds: E 91.9524–92.1217°, N 24.5781–24.7348°), dates after the mission launch.
-2. Obtain product identifiers, acquisition timestamps, scene footprint GeoJSON, product class, orbit/geometry, polarizations, radiometric conventions, and quality flags.
-3. Export **footprints only** to `data/raw/biomass_scene_footprints.geojson`. Do not put login tokens in the GeoJSON or commit non-permitted product metadata.
-4. Run `notebooks/08_biomass_pband_feasibility.ipynb` to calculate footprint overlap and scene list. This notebook is a **metadata audit**, not a P-band land-cover classifier.
-5. If valid Level-1 scenes exist, decide whether to compare standardized backscatter/polarimetric features to independent flood labels. Time-match Sentinel-1 acquisitions carefully and state date differences.
-6. Compare water/vegetation mapping skill against a held-out, stratified independent reference set. Report when open-haor conditions do not benefit from P-band penetration.
+**Scientific limits:** These are non-simultaneous, differently calibrated/geometry-dependent observations. No independent flood/wetland reference classification, P-band superiority metric, methane-flux estimate or wetland habitat validation was established.
 
-Do not extrapolate a 2025+ Biomass acquisition back to 2019–2024, claim the same sensor geometry as Sentinel-1 C-band, or imply actual P-band wetland maps already exist.
+## Original feasibility considerations (retained for provenance)
+
+The feasibility design called for catalog footprint checks, acquisition metadata, radiometric conventions, cloud-masked optical context, comparable viewing geometry and independent water/vegetation reference labels. Those remain sound safeguards for any future sensor comparison.
+
+Original data portals:
+
+- [ESA Biomass mission](https://www.esa.int/Applications/Observing_the_Earth/FutureEO/Biomass)
+- [ESA MAAP Biomass data offer](https://portal.maap.eo.esa.int/biomass/biomass-data-offer/)
+- [MAAP reference Gamma0 processor](https://github.com/MAAP-Project/esa-biomass-gamma0)
+
+Do not extrapolate this October 2026 scene backward as if it supplied 2019–2025 P-band observations.
