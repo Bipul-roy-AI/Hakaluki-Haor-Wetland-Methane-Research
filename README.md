@@ -7,42 +7,46 @@ Sentinel-1 · Sentinel-2 · ESA Biomass P-band · TROPOMI XCH4 · CHIRPS · ERA5
 
 ## Main findings — and their boundaries
 
-The most informative outcome is **not a measured methane release**. Rather, we observed (a) unusually extensive low-VV detections coinciding with exceptional rainfall during June 2022 and (b) **scarce TROPOMI XCH4 observations during months of greatest low-VV screening extent**, making a direct methane response difficult to investigate.
+**Principal result:** The 2019–2025 record shows strong seasonal low-VV changes, but high June screening extents were observed in **2022, 2024 and 2025**, despite differing monthly rainfall. The radar-area metric alone cannot rank flood severity or separate rainfall timing from river-stage effects. **TROPOMI XCH4 is sparsely observed during key monsoon months**, so its available-month correlations do not establish the methane response to flooding.
 
 | Research component | What the completed local analysis reports | What it does **not** prove |
 |---|---|---|
 | Radar observation support | **84/84 months** with Sentinel-1 on one ascending track (relative orbit 41), 214 scenes; one single-scene month | Independent accuracy of a water/flood classification |
-| June 2022 low-VV area | **162.78 km²**, versus **120.10 km²** median of the other six Junes (**+42.68 km²**) at nominal −17 dB | Verified flooded-water area |
-| June 2022 spatial low-VV departure | **+42.16 km²** net screening-frequency-equivalent difference from the **mean** historical June map | A second independent flood-area estimate |
-| June 2022 CHIRPS rainfall | **1,041.35 mm**, **+367.17 mm** above other-June median | Causal proof of flood dynamics |
-| Deseasonalized climate link | Preceding-three-month rainfall sum vs. low-VV area: **Spearman rho +0.524**, n = 81 | Hydrological mechanism or causal response lag |
-| Year-held-out prediction | Climate Ridge: **RMSE 17.45 km²** vs. seasonal baseline **19.15**; Ridge **MAE 13.65** vs. baseline **13.26** | Consistent performance improvement across years |
+| June low-VV extent (−17 dB) | **2022: 162.78 km²; 2024: 164.88 km²; 2025: 161.27 km².** June 2022 is +42.68 km² relative to the other-six-year June median | A uniquely exceptional 2022 extent or verified flood area |
+| June 2022 spatial comparison | **+42.16 km²** net screening-frequency-equivalent difference from the **mean** of the other six June maps | Additional flooded area or uniqueness relative to 2024/2025 |
+| June CHIRPS rainfall | **2022: 1,041.35 mm; 2024: 1,054.26 mm; 2025: 479.17 mm** | Unique 2022 rainfall or a complete catchment forcing budget |
+| Exploratory climate link | Preceding-three-month rainfall sum vs. low-VV area: **Spearman rho +0.524**, n = 81; strongest of 18 screened correlations | Prespecified hypothesis test, causal lag or demonstrated predictive gain |
+| Published held-out climate model | On 82 months, Ridge **RMSE 17.45** vs. baseline **19.15 km²**, but Ridge **MAE 13.65** vs. baseline **13.26 km²**. In held-out 2022, Ridge **MAE 15.19** vs. baseline **9.32 km²** | Robust year-to-year skill or isolation of rainfall anomalies |
 | TROPOMI methane availability | ROI XCH4 in **69/84 months**; only **3/7 Junes**, **2/7 Julys**, **1/7 Augusts** | Representative year-round atmospheric methane measurements |
-| Conditional observation availability | XCH4 present in **21/21** lowest-low-VV-quartile months; only **8/21** highest-quartile months | Causal link between surface wetness and satellite retrieval failure |
-| Methane association | Available-month deseasonalized rank correlations near **zero** | Evidence that methane emissions are unaffected by inundation |
+| Seasonal methane sampling imbalance | XCH4 present in **21/21** lowest-low-VV-quartile months vs. **8/21** highest-quartile months; strongly confounded by season | Effect of flooding on retrieval success or a significant causal contrast |
+| Methane association | Level-3 available-month deseasonalized rho near zero; **49 of 66** main-analysis months fall outside June–October | A wet-season emission-response estimate or evidence of no flux effect |
 | ESA Biomass polarimetry | Four 25 m Gamma0 P-band layers; descriptive comparison with C-band and Sentinel-2 | Superior P-band flood-detection accuracy |
 
 **Read the detailed research findings, non-findings and remaining work:** [Findings and limitations, 2019–2025](research_docs/FINDINGS_2019_2025_AND_LIMITATIONS.md).
 
 ## What is important scientifically
 
-### June 2022: unusual radar screening extent, not a validated flood boundary
+### June 2022 in multi-year context: high extent, not a unique maximum
 
-In June 2022, the nominal low-VV detection area was **162.775 km²**, about **42.676 km² higher** than the median June total in the six comparison years. The spatial June comparison gave **+42.164 km²** when the binary 2022 indicator was contrasted with the *mean per-pixel frequency* of other Junes. These are **different descriptive statistics**. Neither is independently validated extra inundation. June rainfall was substantially above the other-June median.
+The June 2022 nominal −17 dB low-VV area was **162.775 km²**, compared with **164.882 km² in June 2024** and **161.269 km² in June 2025**. The **+42.676 km²** difference relative to the other-six-year June median is mathematically valid, but the other Junes have markedly different low- and high-extent groups. It is **not** evidence that 2022 was the only or largest high-extent June.
 
-A single track with 1–3 scenes per month does not resolve exact flash-flood timing, permanent water versus transient inundation, or flooded vegetation. The VV cutoff is a screening threshold requiring independent calibration.
+The 2022-versus-2024 ordering is also threshold-sensitive: at **−19 dB**, 2022 is **148.301 km²** and 2024 **148.271 km²**; at **−17 dB**, 2022 is **162.775 km²** and 2024 **164.882 km²**; at **−15 dB**, they are **164.771** and **167.058 km²**. No robust ranking follows from differences this small compared with threshold sensitivity.
 
-### Rainfall: a possible antecedent-wetness association, mixed prediction
+June 2022's spatial **+42.164 km²** comparison sums differences from mean historical June *screening frequency*, not additional inundation or event severity. Much of the polygon is flagged low-VV in high months (maximum monthly screening fraction **96.4%**), creating a ceiling for areal extent and possible boundary clipping. The one-track monthly median cannot resolve rainfall-pulse timing, water depth, persistence or downstream impacts. Scene-level analysis with both tracks is the next priority.
 
-After calendar-month adjustment, nominal low-VV deviations were descriptively associated with **same-month rainfall (rho +0.232)**, **one-month-lag rainfall (+0.428)** and **preceding-three-month rainfall (+0.524)**. However, a month + rainfall/temperature Ridge model did not consistently beat the simpler month-median baseline in leave-one-year-out validation. The June 2022 out-of-year model left a **+39.26 km² low-VV residual**. Neither correlation nor residual identifies a particular causal driver.
+### Hydroclimate: antecedent-rainfall association, uncertain mechanisms and prediction
+
+After calendar-month adjustment, nominal low-VV departures had descriptive correlations with **same-month rainfall (rho +0.232)**, **one-month-lag rainfall (+0.428)** and **preceding-three-month rainfall (+0.524)**. The last value is the largest of **18 screened correlations** (three VV thresholds × six predictors), not a prespecified significance result. The published Ridge model includes rainfall at lags 0–2 and temperature, but not the three-month sum; its shrinkage also affects month indicators and complicates separation of rainfall anomalies from the seasonal cycle.
+
+Held-out 2022 performance was **worse** than the month-median baseline (Ridge MAE **15.19**, baseline **9.32 km²**). June 2022's +39.26 km² Ridge residual is not a measurement of flood severity. June 2024 had comparably high radar extent and rainfall, whereas June 2025 had high radar extent with much less concurrent rainfall. Local CHIRPS alone may not capture antecedent wetness, upstream flow or river-stage/backwater conditions; these mechanisms need independent hydrological evidence.
 
 ### Atmospheric methane: observation gaps obstruct the key event
 
-TROPOMI-derived ROI XCH4 was available for 69/84 monthly periods, but only 3/7 Junes and 1/7 Augusts. **June 2022 has no valid monthly ROI XCH4 value in our Level-3-derived dataset**. Availability was **100%** for the lowest 21 low-VV months, versus **38.1%** for the highest 21. This is significant **descriptive sampling imbalance**, but seasonal cloud/weather and acquisition/retrieval conditions may confound it.
+TROPOMI-derived ROI XCH4 was available in **69/84** months, but only **3/7 Junes, 2/7 Julys and 1/7 Augusts**. **June 2022 has no valid monthly ROI XCH4** in this Level-3-derived dataset. Availability was 21/21 in the lowest low-VV quartile and 8/21 in the highest, but this comparison is substantially confounded by season and should **not** be described as a statistically significant inundation effect.
 
-Available-month, calendar-month-deseasonalized Spearman correlations were near zero across tested support levels: about **−0.052 to −0.013** for ROI XCH4 and **+0.026 to +0.049** for ROI-minus-reference-ring XCH4. The respective complete-case analyses used **62–66 months**, fewer than the 69 with a simple ROI methane value; missing-row exclusions warrant audit.
+The main monthly departure analysis retains **66** observations, **49 (74.2%) outside June–October**. It excludes July–August because fewer than three observed years are available for those calendar-month baselines. The available-month ROI correlation is approximately **−0.013** before additional support screening; removing an approximate 10.0 ppb/year linear background trend gives a descriptive rho of approximately **−0.081** on the same 66 months. This does **not** constrain a wet-season emission response, and detrending cannot recover absent observations. The ROI-minus-ring contrast also needs atmospheric and retrieval-quality interpretation.
 
-**We cannot conclude that inundation did or did not alter wetland methane emissions.** XCH4 is an atmospheric column concentration influenced by transport and regional sources, and native Level-2 footprint/retrieval QA checks remain outstanding.
+**No methane emission flux or flood-response direction has been established.** The next step is a limited native Level-2 sampling and detectability feasibility check, not another unqualified monthly concentration–flood regression.
 
 ## Study Area and Earth Observation Results
 
@@ -75,12 +79,21 @@ The maps and plots below introduce the Hakaluki Haor study area and summarize th
 | Critical gap | Work needed |
 |---|---|
 | **Validated flood area / flooded vegetation** | Independent high-resolution reference imagery and/or field observations; threshold and orbit sensitivity; confusion matrices and area uncertainty |
-| **Confirmed 2022 flash-flood onset or cause** | Event-scale radar acquisition timing, rain/gauge/water-level evidence, control for seasonal or permanent water |
+| **Event-level flood severity or cause** | Per-scene ascending/descending SAR, rainfall accumulation timing, water-level/upstream forcing, and separate depth/duration/exposure indicators |
 | **Local methane emission rates** | Flux measurements or defensible atmospheric inversion; XCH4 alone cannot supply flux |
-| **Reliable methane response to June 2022** | Native TROPOMI Level-2 QA, real retrieval footprints, cloud/aerosol filters, wind and source-transport diagnostics; June 2022 Level-3 ROI value currently missing |
+| **Local methane detection feasibility** | Brief native Level-2 sampling/QA audit and habitat-weighted detectability scenarios before attempting detailed transport/inversion; June 2022 ROI XCH4 is missing |
 | **Generalizable climate prediction** | Stronger held-out evaluation, uncertainty and alternative baselines; avoid overfitting seven years of data |
 | **P-band superiority** | Independent water/flooded vegetation labels, noise-floor studies, compatible calibration, temporal/geometry controls |
 | **Independent reproduction** | Code, tables, figures, manifests and reports are published. An independent end-to-end rerun and validation remain to be done. |
+
+## Next research stage
+
+1. **Scene-level SAR (priority):** Compare 2022, 2024 and 2025 (with 2023 as a lower-extent comparator) per acquisition; keep ascending and descending track estimates separate before interleaving time series. Align with CHIRPS daily rainfall while auditing date conventions and ±1-day timing sensitivity.
+2. **Hydrology and remote validation:** Seek water-level and upstream precipitation data; assess stage–area relation only if compatible stage/reference-area data exist; evaluate VV/VH thresholds and independent reference imagery.
+3. **Methane observability gate:** Audit native Level-2 footprints and quality for a small defined sample, then compare habitat-weighted source scenarios against sampling/transport variability. Proceed to detailed atmospheric attribution only if support is sufficient.
+4. **Model redesign:** Reevaluate hydrological predictors with year-blocked model selection and a common observation sample; keep post-hoc α and harmonic alternatives exploratory.
+
+Existing Notebooks 09–11 and the ESA Biomass P-band study are preserved as published exploratory analyses. [Detailed findings](research_docs/FINDINGS_2019_2025_AND_LIMITATIONS.md) · [Methods](research_docs/METHODS_AND_LIMITATIONS.md) · [Roadmap](research_docs/ROADMAP.md).
 
 ## Research questions and methods
 
