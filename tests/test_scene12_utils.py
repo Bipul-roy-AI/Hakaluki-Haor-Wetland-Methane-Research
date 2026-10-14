@@ -54,3 +54,16 @@ def test_threshold_area_validation():
     invalid.loc[0, "lowvv_m19_km2"] = 40
     with pytest.raises(ValueError, match="ordering"):
         check_scene_areas(invalid, reference_km2=100)
+
+def test_scene_support_summary_groups_by_inventory_pass():
+    from src.scene12_utils import describe_scene_support
+    scenes = pd.DataFrame({
+        "year": [2022, 2022], "pass": ["ASCENDING", "DESCENDING"],
+        "relative_orbit": [41, 77], "scene_id": ["a", "b"],
+        "eligible": [True, False], "acquisition_utc": pd.to_datetime(
+            ["2022-06-16T11:56:00Z", "2022-06-18T23:47:00Z"], utc=True),
+        "observed_fraction": [1.0, 0.8], "lowvv_m17_km2": [160.0, 155.0],
+    })
+    out = describe_scene_support(scenes)
+    assert set(out["pass"]) == {"ASCENDING", "DESCENDING"}
+    assert out.loc[out["pass"] == "ASCENDING", "n_eligible"].iloc[0] == 1
